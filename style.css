@@ -2,11 +2,15 @@
     margin: 0px;
 }
 .progress-bar{
-    height: 0.3rem;
+    height: 0.5rem;
     width: 90%;
     background-color: white;
     border-radius: 10px;
     overflow: hidden;
+    transition: all 0.3s;
+}
+.progress-bar:hover{
+    background-color: rgba(255, 255, 255, 0.514);
 }
 .progress{
     background-color: rgb(88, 167, 231);
@@ -14,6 +18,7 @@
     animation-name: slide;
     animation-duration: 2.5s;
 }
+
 .bold{
     font-weight: bolder;
 }
@@ -23,6 +28,7 @@ body{
     background-color: #050B14;
     font-family: 'Inter', sans-serif;
     color: white;
+    min-height: 101vh;
 }
 
 #header--text{
@@ -33,6 +39,7 @@ body{
     padding: 0.5rem;
     border-radius: 0 0 10px 10px ;
     font-weight: lighter;
+    transition: all 0.2s;
 }
 
 .intro__info{
@@ -53,6 +60,11 @@ body{
 .intro__info--main img{
     border-radius: 100%;
     max-width:50%;
+    transition: all 0.3s;
+}
+.intro__info--main img:hover{
+    transform: translateY(-1rem);
+    
 }
 
 .intro__info--1{margin: 1.2rem 0}
@@ -95,11 +107,46 @@ li{
 .projects__list a:hover{
     text-decoration: underline;
 }
-
-
 @keyframes slide{
     from{
         width: 5%;
         background-color: rgb(255, 112, 112);
     }
+}
+@media screen and (min-width: 800px) {
+    #header--text:hover{
+        background: #ffffff00;
+        
+    }
+    .progress-bar{
+        height: 0.8rem;
+    }
+
+    .intro__info--1 > h3 {
+        text-align: left;
+        padding-left: 1rem;
+    }
+    .intro__info{
+        grid-template-columns: 20rem 1fr 20rem;
+        grid-template-rows: 1fr;
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+    }
+    .intro__info--main{
+        grid-column: 2/3;
+    }
+    .intro__info--1{
+        align-self: flex-end;
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .intro__info--2{
+        grid-column: 3/4;
+        grid-row: 1/2;
+        align-self: flex-end;
+        text-align: right;
+    }
+
+
 }
