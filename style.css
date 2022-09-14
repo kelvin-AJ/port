@@ -40,6 +40,7 @@ body{
     border-radius: 0 0 10px 10px ;
     font-weight: lighter;
     transition: all 0.2s;
+    animation: slide-in 0.6s;
 }
 
 .intro__info{
@@ -60,14 +61,20 @@ body{
 .intro__info--main img{
     border-radius: 100%;
     max-width:50%;
+    animation: bounce 0.9s;
     transition: all 0.3s;
 }
 .intro__info--main img:hover{
     transform: translateY(-1rem);
-    
+}
+.intro__info--main h1{
+    animation: bounce 0.5s;
 }
 
-.intro__info--1{margin: 1.2rem 0}
+.intro__info--1{
+    margin: 1.2rem 0;
+    animation: fade-in 0.5s;
+}
 .intro__info--1 > h3 {
     font-weight: light;
     font-size: 1rem;
@@ -90,6 +97,7 @@ li{
     min-height: 10rem;
     color: rgba(255, 255, 255, 0.623);
     padding: 0.5rem;
+    animation: fade-in 0.5s;
 }
 .projects__list ul{
     list-style-type: none;
@@ -113,6 +121,26 @@ li{
         background-color: rgb(255, 112, 112);
     }
 }
+@keyframes slide-in{
+    from{
+        transform: translateY(-3rem);
+    }
+}
+@keyframes bounce {
+    0%{
+        transform: scale(1.5)
+    }
+    30%{
+        transform: scale(0.8);
+    }
+}
+@keyframes fade-in {
+    from{
+        opacity: 0.1;
+        transform: translateY(3rem);
+    }
+}
+
 @media screen and (min-width: 800px) {
     #header--text:hover{
         background: #ffffff00;
