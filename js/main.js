@@ -19,9 +19,37 @@ const skills = [
 
 const links = [
     {
-        label: "Week1 notes",
+        label: "Building for mobile and local storage",
         url: "week1/index.html"
     },
+    {
+        label: "Week2 notes",
+        url: "week1/index.html"
+    },
+    {
+        label: "Week3 notes",
+        url: "week1/index.html"
+    },
+    {
+        label: "Week4 notes",
+        url: "week1/index.html"
+    },
+    {
+        label: "Week5 notes",
+        url: "week1/index.html"
+    },
+    {
+        label: "Week6 notes",
+        url: "week1/index.html"
+    },
+    {
+        label: "Week7 notes",
+        url: "week1/index.html"
+    },
+    {
+        label: "Week8 notes",
+        url: "week1/index.html"
+    }
 
 ]
 
