@@ -64,9 +64,7 @@ body{
     animation: bounce 0.9s;
     transition: all 0.3s;
 }
-.intro__info--main img:hover{
-    transform: translateY(-1rem);
-}
+
 .intro__info--main h1{
     animation: bounce 0.5s;
 }
