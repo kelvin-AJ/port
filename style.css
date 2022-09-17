@@ -25,7 +25,7 @@
 
 
 body{
-    background-color: #050B14;
+    background-color: #0d2241;
     font-family: 'Inter', sans-serif;
     color: white;
     min-height: 101vh;
@@ -109,11 +109,11 @@ li{
     padding: 0.5rem;
     padding-left: 2rem;
 }
-.projects__list a{
+a{
     text-decoration: none;
     color: rgb(88, 167, 231);
 }
-.projects__list a:hover{
+a:hover{
     text-decoration: underline;
 }
 
@@ -121,7 +121,6 @@ li{
 #topic__name{
     text-align: center;
     padding: 1rem;
-    border: 2px solid rgb(255, 112, 112);
     margin: 1rem;
     border-radius: 7px;
 }
@@ -129,6 +128,55 @@ li{
     text-align: center;
     padding: 0.4rem;
 }
+.notes-main{
+    margin: 0 auto;
+    border-radius: 7px;
+    max-width: 70%;
+    background-color: #0c192c;
+    color: #ffffffcb;
+    padding: 2rem;
+}
+.emph{
+    font-weight: bolder;
+    font-size: 1rem;
+}
+.emph_2{
+    display: block;
+    color: #FFFFFF;
+}
+.notes-list{
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+}
+input{
+    margin: 1rem;
+    height: 2.5rem;
+    border-radius: 7px;
+    min-width: 20rem;
+    border: none;
+    background-color: #dadadab9;
+}
+button{
+    min-width: 5rem;
+    margin: 10px;
+    background-color: #0d2241;
+    border-radius: 5px;
+    border: none;
+    padding: 0.5rem;
+    color: white;
+    transition: all 0.5s;
+}
+button:hover{
+    border: 1px solid #FFFFFF;
+}
+textarea{
+    min-width: 28rem;
+    border-radius: 7px;
+    min-height: 20rem;
+    background-color: #dadadab9;
+    padding: 0.3rem;
+}
+
 
 h3{
     margin: 1rem;

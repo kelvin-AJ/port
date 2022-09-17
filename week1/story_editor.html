@@ -3,47 +3,51 @@
     <head>
     <title>Story Writer</title>
         
-    <style>
-    textarea{
-    width:800px;
-    height: 250px;
-    background-color: lightyellow;
-    }
-    </style>
+    <link rel="stylesheet" href="../style.css" />
     </head>
 
     <body>
-        <h1>Story Editor</h1>
+        <header> 
+        <h1 id="topic__name">Story Editor</h1>
+        </header>
+    <main class="notes-main">
         Story Name:<input id=name_input></input>
         <section>
-        <button onclick="loadStory()">Find and Edit It</button>
-        <button onclick="saveStory()">Save It</button>
-        <button onclick="displayStory()">Display It</button>
+            <button onclick="loadStory()">
+                Find and Edit It
+            </button>
+            <button onclick="saveStory()">
+                Save It
+            </button>
+            <button onclick="displayStory()">Display It</button>
         </section>
         <textarea id="story_editor" placeholder="Write a totally awesome story
         here."></textarea>
         <section id="story_display"></section>
-
+    </main>
         <script>
             function loadStory(){
-            var storyName = document.getElementById("name_input").value
+            const  storyName = document.getElementById("name_input").value
 
-            var storyHTML = localStorage.getItem(storyName)
-            document.getElementById("story_editor").value = storyHTML
+            const storyHTML = localStorage.getItem(storyName)
+            document.getElementById("story_editor").value = storyHTML;
             }
 
             function saveStory(){
-            var storyName = document.getElementById("name_input").value
+            const storyName = document.getElementById("name_input").value
 
-            var storyHTML = document.getElementById("story_editor").value
+            const storyHTML = document.getElementById("story_editor").value
             localStorage.setItem(storyName, storyHTML)
             }
 
             function displayStory(){
-            var storyHTML = document.getElementById("story_editor").value
-            
+            const storyHTML = document.getElementById("story_editor").value
+
             document.getElementById("story_display").innerHTML = storyHTML
             }
             </script>
+            <footer>
+                © 2022 Ola K. Ajibola
+            </footer>
     </body>
 </html>
