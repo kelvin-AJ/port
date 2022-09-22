@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../style.css">
+        <title>Week 2</title>
+
+    </head>
+    <body>
+        <header id="topic__name">
+            <h1>Week 02 Activity</h1>
+            <p id="topic__description">
+                Notes from reading exercises and link to practice
+            </p>
+        </header>
+        <main class="notes-main">
+            <ul>
+                <li class="notes-list"><span class="emph">Initial Notes:</span>
+                    
+                    <ol>
+                        <li>Graceful Degradation involves building a website that works best in modern browsers that uses Javascript, but will work to a reasonable standard on older browsers.</li>
+                        <li>Progressive enhancement involves building a website from the ground up. focusing on base functionality. then adding extra stuff as we go.</li>
+                        <li>For Backwards compatibility, transpilers like Babel can be used</li>
+                    </ol>
+                </li>
+                <li>
+                    <span class="emph">Rainbow Button:</span>
+                    <button id="rainbow-btn">Click me!</button>
+                    <button id="reset-btn">Reset</button>
+                </li>
+                
+                <li class="notes-list">
+                    <span class="emph">Programming Basics:</span>
+                    <ol>
+                        <li>Primitive Data Types include: String, Symbol(ES6), Number, Boolean, Undefined, Null. arrays, functions, abject literals are objects</li>
+                        <li>An operator applies operation to a value. A <b>binary</b> operator requires two operands</li>
+                        <li>
+                            When defining variables, <b>'const'</b> for values that wouldn't be changed. <b>'let'</b> for values that can be reassigned. const and let are block scoped.
+                        </li>
+                        <li>
+                            A <b>scope</b> basically everywhere a variable/constant can be accessed.
+                            <ul>
+                                <li>Global Scope: accessible everywhere</li>
+                                <li>Local Scope: accessible only locally(inside the block)</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="emph_4"><span class="const">camelCase</span></span> is probably the best variable naming convention to use in JS
+                        </li>
+                        <li>
+                            Square brackets are an alternative to accessing primitive data types:  <span class="emph_4">
+                                <span class="const">name</span><span class="symbol">[</span><span class="string">'length'</span><span class="symbol">]</span>
+                            </span> 
+                        </li>
+                        <li>
+                            Some string formatting methods:<br />
+                            <span class="emph_4">
+                                  <span class="const">name</span><span class="symbol">.</span><span class="method">toUpperCase</span><span class="symbol">(); </span>,
+                                
+                                  <span class="const">name</span><span class="symbol">.</span><span class="method">toLowerCase</span><span class="symbol">(); </span>,
+                                  
+                                  <span class="const">name</span><span class="symbol">.</span><span class="method">charAt</span><span class="symbol">(1);</span>,
+                                  
+                                  <span class="const">name</span><span class="symbol">.</span><span class="method">indexOf</span><span class="symbol">(<span class="string">'x'</span>);</span>
+                            </span>
+                            and so on. We also surround strings with backticks like this <span class="emph_4"><span class="string">`This "string" is surrounded in backticks so i can use normal quotations(") inside and i can insert variable and other values using this <span class="symbol">${<span class="const">myVariable</span>}</span>`</span></span> 
+                        </li>
+                        <li>
+                            Then we also have ES6 methods for Numbers like <span class="emph_4">(), Number.isFinite(). </span>Then methods that come with numbers like <span class="emph_4"> toExponential(), toFixed(), toPrecision()</span>
+                        </li>
+                        <li>
+                            Type coercion is a smart feature of JS but can make it difficult to spot errors. <span class="emph_3">Avoid it</span>
+                        </li>
+                        <li>
+                            We can convert Strings to Numbers and vice versa: <span class="emph_4">Number('3')</span> and <span class="emph_4">String(6)</span>. This is especially useful when working with user inputs that are strings. To 'Parse' to integers or Numbers we use <span class="emph_4">parseInt('string', number base to be parsed to e.g 10 is to base 10) or parseFloat('string', number base to be parsed to e.g 10 is to base 10)</span>
+                        </li>
+                    </ol>
+                </li>
+                <li class="notes-list">
+                    <span class="emph">Arrays, Logic and Loops:</span>
+                    <ol>
+                    <li>
+                        To create arrays we can use square brackets of the array constructor function.
+                    </li>
+                    <li>Destructuring arrays invloves taking out values from an array and using them as individual values</li>
+                    <li>Array methods: (example of use in console)
+                        <ul>
+                            <li>The <span class="emph_4">Array.prototype.slice()</span> method returns an array "chopped" off from another.</li>
+                            <li>The <span class="emph_4">Array.prototype.splice()</span> method deletes elements from and array. It can also be used to replace elements in the array.</li>
+                            <li>The <span class="emph_4">Array.prototype.sort()</span> method sorts strings and numbers alphabetically.</li>
+                            <li>The <span class="emph_4">Array.prototype.indexOf()</span> method gets the index of an element</li>
+                            <li>The <span class="emph_4">Array.prototype.includes()</span> method returns a boolean (true/false) for if the element is included in the array.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        We can have mulitdemntional array too <span class="emph_4">[[1,4],[5,6]]</span>
+                    </li>
+                    <li>
+                        Sets are data structures used to store unique values.We create a new Set by using the constuctor <span class="emph_4"><span class="symbol">new</span> <span class="method">Set()</span></span>
+                    </li>
+                    <li>
+                        We can convert array to sets and by passing in the array as a parameneter to the constructor. Sets also have methods for adding, deleting and other modifictaion methods. 
+                    </li>
+                </ol>
+                </li>
+                <li class="notes-list">
+                    <span class="emph">Functions:</span>
+                    <ul>
+                        <li>
+                            We can declare functions by using function declarations:<br /> <span class="emph_4">function myFunction() {<br /> --what the function does goes here-- <br />}</span><br />
+                            or function expressions:<br /> <span class="emph_4">const myFunction = function() {<br /> --what the function does goes here-- <br />}</span><br />
+
+                            we also have arrow functions.
+                        </li>
+                        <li>
+                            Whatever we return from a function using the <span class="emph_4">return</span> keyword, becomes the value we get when the function is called.
+                        </li>
+                        <li>
+                            Arguments we pass into functions are accesible by the function and the function uses the arguements to return desired values.
+                        </li>
+                        <li>
+                            We can assign deafault values to srguements by using the assignment operator with the arguments.
+                        </li>
+                        <li>
+                            Hoisting invloves invoking(calling) functiosn before they are defined.
+                        </li>
+                        <li>
+                            A function ecomes a callback funcion when it is passed as a parameter of another function.
+                            Array iterators like, forEach, map, filter, reduce and so on, take in callback functions. In most situations, arrow functions are used.
+                        </li>
+                        <li>
+                            We can chain array iterators together because they all return arrays.
+                        </li>
+                    </ul>
+                    
+                </li>
+                <li>
+                    <a href="./quiz">Quiz Ninja</a>
+                </li>
+            </ul>
+        </main>
+        <footer>
+            © 2022 Ola K. Ajibola
+        </footer>
+        <script src="./script.js"></script>
+    </body>
+</html>

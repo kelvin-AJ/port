@@ -23,8 +23,8 @@ const links = [
         url: "week1/index.html"
     },
     {
-        label: "Week2 notes",
-        url: "week1/index.html"
+        label: "Arrays, Logic, Loops and Functions",
+        url: "week2/index.html"
     },
     {
         label: "Week3 notes",
@@ -75,3 +75,4 @@ const renderLinks = function(links) {
 
 renderSkills(skills);
 renderLinks(links);
+
