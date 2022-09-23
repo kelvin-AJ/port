@@ -32,3 +32,27 @@ console.log(`const strongAvengers = avengers.slice(2, 4) >> `, strongAvengers);
 
 avengers.splice(1, 3, 'Ant-man', 'The wasp');
 console.log(`avengers.splice(1, 3, 'Ant-man', 'The wasp') >> `, avengers);
+
+const numbersArr = [1,2,3,3,4,5,1,4,3,333,90];
+const numSqr = numbersArr.map(num => num**2);
+
+console.log(numbersArr);
+console.log(numSqr)
+const numbersSet = new Set(numbersArr);
+console.log(numbersSet);
+
+
+
+const sayHello1 = function() {
+    console.log("Hello from JavaScript!")
+}
+
+function sayHello2(firstName) {
+    console.log(`Hello, ${firstName}!`)
+}
+
+const sayHello3 = firstName => `How are you doing today ${firstName}`
+
+sayHello1();
+sayHello2("Kelvin");
+console.log(sayHello3("ola"))
