@@ -1,6 +1,8 @@
 'use strict'
 const skillsListEl = document.querySelector("#skills__list");
 const projectsList = document.querySelector(".project__list--main");
+const documentBody = document.querySelector("body")
+const toggleThemeBtn = document.querySelector(".theme-switch");
 
 const skills = [
     {
@@ -28,7 +30,7 @@ const links = [
     },
     {
         label: "Week3 notes",
-        url: "week1/index.html"
+        url: "week3/index.html"
     },
     {
         label: "Week4 notes",
@@ -72,6 +74,11 @@ const renderLinks = function(links) {
         </li>`)
     })
 }
+const toggleTheme = function(){
+    documentBody.classList.toggle("dark-mode");
+};
+toggleThemeBtn.addEventListener("click", toggleTheme);
+
 
 renderSkills(skills);
 renderLinks(links);

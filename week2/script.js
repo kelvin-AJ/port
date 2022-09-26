@@ -3,7 +3,7 @@ console.log("Hello small World!");
 // Background change
 // DOM selection
 const rainBtn = document.getElementById("rainbow-btn");
-const resetBtn = document.getElementById("reset-btn")
+const resetBtn = document.getElementById("reset-btn");
 const rainbow = ['red','orange','yellow','green','blue','rebeccapurple','violet']
 function change() {      
     document.body.style.background = rainbow[Math.floor(7*Math.random())];

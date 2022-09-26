@@ -4,11 +4,15 @@
 .progress-bar{
     height: 0.5rem;
     width: 90%;
-    background-color: white;
+    background-color: #36363650;
     border-radius: 10px;
     overflow: hidden;
     transition: all 0.3s;
 }
+.dark-mode .progress-bar{
+    background-color: white;
+}
+
 .progress-bar:hover{
     background-color: rgba(255, 255, 255, 0.514);
 }
@@ -25,16 +29,22 @@
 
 
 body{
-    background-color: #0a1a31;
+    
+    background-color: #ffffff;
     font-family: 'Inter', sans-serif;
-    color: white;
+    transition: all 0.2s;
     min-height: 101vh;
 }
+body.dark-mode{
+    background-color: #0a1a31;
+    color: white;
+}
+
 
 #header--text{
     text-align: center;
     margin: 0 auto;
-    background-color:  rgba(211, 234, 255, 0.281);
+    background-color: rgba(100, 180, 255, 0.281);
     width: 90%;
     padding: 0.5rem;
     border-radius: 0 0 10px 10px ;
@@ -43,8 +53,34 @@ body{
     animation: slide-in 0.6s;
 }
 
+.theme-switch{
+    position: absolute;
+    right: 4rem;
+    background-color: #b8b8b87c;
+    height: 2rem;
+    width: 4rem;
+    border-radius: 1.2rem;
+    transition: all 0.1s;
+    padding: 0.2rem;
+    margin-top: 0.2rem;
+}
+.theme-switch:hover{
+    background-color: #b8b8b83a;
+    padding: 0.3rem;
+}
+.switch-nob{
+    height: 100%;
+    width: 2rem;
+    background-color: white;
+    border-radius: 1rem;
+    transition: all 0.2s;
+}
+.dark-mode .switch-nob{
+    background-color: #000a1b;
+    transform: translateX(2rem);
+}
+
 .intro__info{
-    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
     padding: 1rem;
@@ -87,29 +123,38 @@ li{
     margin: 0.5rem 0;
 }
 .projects__list{
-    background-color: rgba(211, 234, 255, 0.281);
+    background-color: rgba(100, 180, 255, 0.281);
     backdrop-filter: blur(10px);
     width: 90%;
     margin: 0 auto;
     border-radius: 1rem;
     min-height: 10rem;
-    color: rgba(255, 255, 255, 0.623);
     padding: 0.5rem;
     animation: fade-in 0.9s;
 }
+.dark-mode .projects__list{
+    color: rgba(255, 255, 255, 0.623);
+}
+
 .projects__list ul{
     list-style-type: none;
     padding: 0px;
 }
 .projects__list li {
-    color: white;
     border-bottom: 1px solid rgba(255, 255, 255, 0.397);
     padding: 0.5rem;
     padding-left: 2rem;
 }
+.dark-mode .projects__list li {
+    color: white;
+}
+
 a{
     text-decoration: none;
-    color: rgb(88, 167, 231);
+    color: rgb(36, 111, 172);
+}
+.dark-mode a{
+    color: rgb(151, 199, 238);
 }
 a:hover{
     text-decoration: underline;
@@ -129,10 +174,14 @@ a:hover{
 .notes-main{
     margin: 0 auto;
     border-radius: 7px;
-    max-width: 70%;
-    background-color: #070e1a;
-    color: #ffffffcb;
+    max-width: 70%; 
+    background-color: rgba(100, 180, 255, 0.281);
     padding: 2rem;
+}
+
+.dark-mode .notes-main{
+    color: #ffffffcb;
+    background-color: #070e1a;
 }
 .emph{
     font-weight: bolder;
@@ -140,13 +189,15 @@ a:hover{
 }
 .emph_2{
     display: block;
-    color: #FFFFFF;
 }
+
+
 .emph_3{
     color: #ffabab;
 }
 .emph_4{
-    background-color: #1d1d23;
+    /* background-color: #1d1d23; */
+    background-color: whitesmoke;
     padding: 0.2rem;
     border-radius: 7px;
     font-family: monospace;
@@ -178,13 +229,17 @@ input{
 button{
     min-width: 5rem;
     margin: 10px;
-    background-color: #0d2241;
+    background-color: #4e8cff;
     border-radius: 5px;
     border: none;
     padding: 0.5rem;
     color: white;
     transition: all 0.5s;
 }
+.dark-mode button{
+    background-color: #0d2241;
+}
+
 button:hover{
     border: 1px solid #FFFFFF;
 }
@@ -205,6 +260,8 @@ footer{
     padding: 1rem;
     text-align: center;
     font-size: 0.8rem;
+}
+.dark-mode footer{
     color: rgba(240, 248, 255, 0.288);
 }
 
@@ -248,6 +305,7 @@ footer{
         padding-left: 1rem;
     }
     .intro__info{
+        display: grid;
         grid-template-columns: 20rem 1fr 20rem;
         grid-template-rows: 1fr;
         width: 90%;
