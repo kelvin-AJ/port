@@ -29,7 +29,7 @@ const links = [
         url: "week2/index.html"
     },
     {
-        label: "Week3 notes",
+        label: "Objects, the DOM and Events",
         url: "week3/index.html"
     },
     {
