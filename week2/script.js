@@ -1,3 +1,28 @@
+const documentBody = document.querySelector("body")
+const toggleThemeBtn = document.querySelector(".theme-switch");
+
+const toggleTheme = function(){
+    const curTheme = window.localStorage.getItem('theme');
+
+    if(curTheme == "dark-mode"){
+        window.localStorage.setItem('theme', 'light-mode')
+        documentBody.classList.remove(curTheme);
+    }else{
+        window.localStorage.setItem('theme', 'dark-mode')
+        documentBody.classList.add("dark-mode")
+    }
+    
+};
+let curTheme;
+const activateTheme = function(){
+    curTheme = window.localStorage.getItem('theme');
+    documentBody.classList.add(curTheme)
+}
+
+activateTheme()
+toggleThemeBtn.addEventListener("click", toggleTheme);
+
+
 console.log("Hello small World!");
 
 // Background change
@@ -10,7 +35,7 @@ function change() {
 }
 
 rainBtn.addEventListener('click', change);
-resetBtn.addEventListener('click', () => document.body.style.background = '#0a1a31');
+resetBtn.addEventListener('click', () => document.body.style.background = curTheme === 'dark-mode' ? '#0a1a31' : '#FFFFFF');
 
 {
     const a = 5;
@@ -40,6 +65,8 @@ console.log(numbersArr);
 console.log(numSqr)
 const numbersSet = new Set(numbersArr);
 console.log(numbersSet);
+
+
 
 
 

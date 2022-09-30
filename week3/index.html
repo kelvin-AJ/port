@@ -13,10 +13,194 @@
             <p id="topic__description">
                 Notes from reading exercises and link to practice
             </p>
+            <div class="theme-switch">
+                <div class="switch-nob"></div>
+            </div>
         </header>
         <main class="notes-main">
-            <ul>
-                
+            <ul class="notes-list" id="click">
+                <li >
+                    <span class="emph">Object methods, 'this'</span>
+                    <ol>
+                        <li>
+                            Objects are used to represent real-world objects. So, if if have an Object <span class="emph_4"><span class="const">person</span></span> for example, person can have functions(called methods when used in objects) such as <span class="emph_4"><span class="method">sayHello</span>()</span></span>
+                        </li>
+                        <li>
+                            The <span class="emph_4"><span class="symbol">this</span></span> keyword in objects refer to the object. Although, the value of <span class="emph_4"><span class="symbol">this</span></span> is evaluated during run-time, depnding on the context. So, it does not depend on where the function(method) was declared.<span class="emph_4"><span class="symbol">this</span></span> points to whatever object calls it. 
+                        </li>
+                        <li>
+                            Using <span class="emph_4"><span class="symbol">this</span></span> without an object returns undefined.
+                        </li>
+                        <li>
+                            Arrow fuunctions have no <span class="emph_4"><span class="symbol">this</span></span>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <span class="emph">More On Objects</span>
+                    <ol>
+                        <li>
+                            An object in JavaScript is a self-contained set of related values. They act as a collection of named properties that map to any JavaScript value(data type: string, boolean, array, objects, integers and so on). 
+                        </li>
+                        <li>
+                            We acn create objects by using a pair of curly braces or using the <span class="emph_4">Object()</span> constructor
+                        </li>
+                        <li> 
+                            We lookup those values by using those names(keys). We can either use the dot notation :
+                            <span class="emph_4"><span class="const">ObjectName</span>.<span class="method">key</span></span>
+                            or square brackets
+                            <span class="emph_4"><span class="const">ObjectName</span>[<span class="method">key</span>]</span>. We can use the square brackets for computed properties.
+                        </li>
+                        <li>
+                            Object keys follow JavaScript Naming Conventions.
+                        </li>
+                        <li>
+                            using the <span class="emph_4">in</span> operator, we can check whether an object has a particular property. We can also use the <span class="emph_4">.hasOwnProperty('property')</span>
+                        </li>
+                        <li>
+                            We can use a <span class="emph_4">for in</span> loop to loop over keys of an object. <span class="emph_4">Object.keys(), Object.values(), and Object.entries()</span> return an array of the keys, values and entries of the Object passed in as an argument respectively. If we destructure the entries into <span class="emph_4">[keys, values]</span> while looping through them, we get acces to the keys and values.
+                        </li>
+                        <li>
+                            We can add or change properties by simply assigning or reassigning those keys to the new values.
+                        </li>
+                        <li>
+                            Objects are copied by reference.
+                        </li>
+                        <li>
+                            We can desstructure objects as funuction parameters so the order of passing those parameter do not matter. It is of great advantage whne we're working with functions that require alor of parameters
+                        </li>
+                        <li>
+                            Defining functions or variables generally inside Objects made it very unlikely to have nameing collision issues. When this function are to be used, they have to be preceeded by the namespace(object name).
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <span class="emph">Built-in Objects</span>
+                    <ol>
+                        <span class="emph_2">JSON</span>
+                        <li>JSON is a string representation of Object literal Notation. No functions, all propery names and strings must be double-quoted. properties could include: numbers, booleans, null, arrays and objects
+                        </li>
+                        <li>
+                            <span class="emph_4">JSON.parse</span> and <span class="emph_4">JSON.stringify</span> are used to convert objects to JSON string and back. methods are ignored by <span class="emph_4">stringify()</span>
+                        </li>
+                        <br>
+
+                        <span class="emph_2">The <span class="emph_4">Math</span> Object</span>
+                        <li>The <span class="emph_4">Math</span> Object has several properties and methods representiong mathematical constants and operations.(all examples in console)</li>
+                        <li>
+                            Rounding errors might occur while working with floating point numbers because the computer actually works with binary in the background.
+                        </li>
+                        <br>
+                        <span class="emph_2">The Date Object</span>
+                        <li>Date objects contain information about dates and times(all examples in console)</li>
+                        <li>The Epoch is 1st January 1970. We use it in programming as a reference point in time from which to measure dates.(getters in console)</li>
+                        <br>
+                        <span class="emph_2">The <span class="emph_4">RegExp</span> Object</span>
+                        <li>We can create regualar expresiions by using the foward slashes like this: <span class="emph_4"> /[a-zA-Z]+ing$/</span> or using the <span class="emph_4"><span class="method">RegExp</span>()</span> constructor and passing the expression as an argument.
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <span class="emph">The Document Object Model(DOM)</span>
+                    <ol  class="special">
+                        <li>The DOM is a represent ationof an HTML Document as a network of connected nodes
+                        </li>
+                        <li>
+                            Node Types are codes that represent the types in this order:
+                            <table class="table" style="table-layout: fixed; width: 263px">
+                                <colgroup>
+                                <col style="width: 168px">
+                                <col style="width: 95px">
+                                </colgroup>
+                                <thead>
+                                  <tr>
+                                    <th>Code</th>
+                                    <th>Type</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>element</td>
+                                  </tr>
+                                  <tr>
+                                    <td>2</td>
+                                    <td>attribute</td>
+                                  </tr>
+                                  <tr>
+                                    <td>3</td>
+                                    <td>text</td>
+                                  </tr>
+                                  <tr>
+                                    <td>8</td>
+                                    <td>comment</td>
+                                  </tr>
+                                  <tr>
+                                    <td>9</td>
+                                    <td>body</td>
+                                  </tr>
+                                </tbody>
+                                </table>
+                        </li>
+                        <li>
+                            DOM Lists are not Arrays but can by converted to arrays by using the Arry.from method or the spread operator.
+                        </li>
+                        <li>
+                            Query Selectors allows you to use CSS notation to find elements
+                        </li>
+                        <li>
+                            The <span class="emph_4">childNodes</span> property is a list of all the nodes that are children of the node concerned. The <span class="emph_4">children</span> property only returns any element nodes that are children of that node
+                        </li>
+                        <li>
+                            We can use <span class="emph_4">nodeValue and textContent</span> to get the text content of a node. textContent returns the content as a string
+                        </li>
+                        <li>'''The toggle button at the top of the page is an example of className and classList usage</li>
+                        <li>
+                            We can creat elements by using the <span class="emph_4">document.createElement</span> method. We canalso create text nodes by using the 'creatTextNode' method.
+                        </li>
+                        <li>When updating css with JS, instead of using dashes like normal CSS, property names are written in Camel Case</li>
+                        <li>
+                            The style property can be used to see what CSS Style have been set on an element. Thers's also a getComputedStyle() function.
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <span class="emph">Events</span>
+                    <ol>
+                        <li>We handle this events when they occur with event handlers. For example, we can alert a message to the user when a button is clicked. The "click" is the event in this situation.
+
+                        </li>
+                        <li>
+                            We can use inline event handlers like the 'onclick' which we insert as an attribute directly in the HTML tags and assign them to the JavaScript we want to run. Although, inline event handlers are best avoided.
+                        </li>
+                        <li>
+                            Using EventListeners are a recommended way of dealing with events mainly because they allow multiple functions to be attached to an event. 
+                        </li>
+                        <li>
+                            The <span class="emph_4">addEventListener</span> method takes in two arguments. The first is the event that we want to listento. The other is the function be executed when the event occurs
+                            <span class="emph_4">.<span class="method">addEventListener</span>(<span class="string">'event'</span>, <span class="const">function</span> );</span> 
+                        </li>
+                        <li>
+                            <button class="event-btn">
+                                Event Button 
+                            </button>(practice in script)
+                        </li>
+                        <li>
+                            There are no swipe events. These need to be created by using a combination of touchstart, touchmove, and touchleave events that monitor the distance and direction moved from start to finish of a touch event.
+                        </li>
+                        <li>We can remove event listeners by using the <span class="emph_4">removeEventListener()</span> method</li> but we can't remove anonymous functiosn if we plan to remove them.
+                        <li>
+                            We can prevent deafult beahaviors to stop the page from doing what it usually does for links or form submission by using the <span class="emph_4">preventDefault()</span>
+                        </li>
+                        <li>
+                            There are two phases of event propagation. Capturing and Bubbling. When a button is clicked for example, the event goes through a capturing phase first(the click evene happens on all parent element from the top down to the target) the bubbling phase is basically the reverse.
+                        </li>
+                        <li>
+                            Event delegation helps attach event listeners to parent elements in order to capture events that are triggered by the child element.
+                        </li>
+                    </ol>
+                </li>
+                <li><a href="../week2/quiz/index.html">Quiz Ninja</a></li>
             </ul>
         </main>
         <footer>
