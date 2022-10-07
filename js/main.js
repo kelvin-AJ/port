@@ -34,7 +34,7 @@ const links = [
     },
     {
         label: "Week4 notes",
-        url: "week1/index.html"
+        url: "week4/index.html"
     },
     {
         label: "Week5 notes",
@@ -71,7 +71,9 @@ const renderLinks = function(links) {
         `
         <li>
             <span class="bold">Week ${i + 1}: </span> <a href="${link.url}">${link.label}</a>
-        </li>`)
+        </li>
+        ${i==links.length - 1 ? "" : "<hr>"}
+        `)
     })
 }
 const toggleTheme = function(){
@@ -92,7 +94,7 @@ const activateTheme = function(){
 }
 
 activateTheme()
-toggleThemeBtn.addEventListener("click", toggleTheme);
+// toggleThemeBtn.addEventListener("click", toggleTheme);
 
 
 renderSkills(skills);

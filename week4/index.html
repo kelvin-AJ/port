@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../style.css">
+        <title>Week 4</title>
+    </head>
+    <body>
+        <header id="topic__name">
+            <h1>Week 04 Activity</h1>
+            <p id="topic__description">
+                Notes from reading exercises and link to practice.
+            </p>
+        </header>
+        <main class="notes-main">
+            <ul class="notes-list" id="click">
+                <li>
+                    <span class="emph">Forms</span>
+                    <ol>
+                        <li>
+                            The <span class="emph_4">span</span> attribute is the URL where the form data would be submitted
+                        </li>
+                        <li>
+                            We can access form element by using <span class="emph_4">document.forms</span> which returns an HTML collection of all forms in the document. we can also use <span class="emph_4">document.<span class="method">getElementsByTagname</span>(<span class="string">"form"</span>)[0]</span>
+                        </li>
+                        <li>
+                            we can use the <span class="emph_4">name</span> attribute to identify a form. We can do this with both dot "." and bracket "[]" notation. Using the bracket notation is more advised to avoid selection form properties.
+                        </li>
+                        
+                        <li>the <span class="emph_4">elements</span> method returns an HTML collection of all elements contained in the form.
+                        </li> 
+
+                        <li>We can also access the form controls using their <span class="emph_4">name</span> attributes as if it was a property of the form object. so if set the name attribute of a first Name input to <span class="emph_4">firstName</span>, we can access it like <span class="emph_4">form.firstName</span>
+                        </li>
+                        <li><span class="emph_4">form.submit()</span> would submit the form automatically. A form can be submitted manually by using an actual button or an input type of submit.
+                        </li> 
+                        <li>
+                        <span class="emph_4">form.reset()</span> resets all form controls back to their initial values. a button type with the attribute of <span class="emph_4">reset</span> does the same thing. Reset buttons are generally NOT adviced. You don't want the users to wipe out all the data they entered when it's not yet saved.
+                        </li>
+                        <li>form.action sets the action attribute of a form.
+                        (form events in console)
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <span class="emph">Object Oriented Programming (OOP)</span>
+                    <ol>
+                        <li>
+                            
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="./projects/search/search.html">search.html</a>
+                </li>
+                <li><a href="./projects/hero/hero.html">hero.html</a>
+                </li>
+                <li><a href="../week2/quiz/index.html">Quiz Ninja.html</a>
+                </li>
+            </ul>
+        </main>
+        <footer>
+            © 2022 Ola K. Ajibola
+        </footer>
+        <script src="./script.js"></script>
+    </body>
+</html>

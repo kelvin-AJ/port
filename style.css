@@ -1,3 +1,11 @@
+:root {
+    --background-white: #ffffff;
+    --primary-cyan : #02485ade;
+    --dark-mode-bg : #012129de;
+    --secondary : #eb7405;
+    --links : #e4faffde;
+}
+
 * {
     margin: 0px;
 }
@@ -14,10 +22,11 @@
 }
 
 .progress-bar:hover{
-    background-color: rgba(255, 255, 255, 0.514);
+    box-shadow: 0px 0px 3px grey;
+    height: 0.7rem;
 }
 .progress{
-    background-color: rgb(88, 167, 231);
+    background-color: var(--primary-cyan);
     height: 100%;
     animation-name: slide;
     animation-duration: 2.5s;
@@ -29,13 +38,13 @@
 
 
 body{
-    background-color: #f2feff;
+    background-color: var(--background-white);
     font-family: 'Inter', sans-serif;
     transition: all 0.2s;
     min-height: 101vh;
 }
 body.dark-mode{
-    background-color: #0a1a31;
+    background-color: var(--dark-mode-bg);
     color: white;
 }
 
@@ -43,10 +52,11 @@ body.dark-mode{
 #header--text{
     text-align: center;
     margin: 0 auto;
-    background-color: rgba(100, 180, 255, 0.281);
+    background-color: var(--primary-cyan);
+    color: #FFFFFF;
     width: 90%;
     padding: 0.5rem;
-    border-radius: 0 0 10px 10px ;
+    border-radius: 0 0 0.3rem 0.3rem ;
     font-weight: lighter;
     transition: all 0.2s;
     animation: slide-in 0.6s;
@@ -75,11 +85,11 @@ body.dark-mode{
     transition: all 0.2s;
 }
 .switch-nob:hover{
-    background-color: #000a1b;
+    background-color: var(--primary-cyan);
 }
 
 .dark-mode .switch-nob{
-    background-color: #000a1b;
+    background-color: var(--primary-cyan);
     transform: translateX(1.5rem);
 }
 .dark-mode .switch-nob:hover{
@@ -114,48 +124,66 @@ body.dark-mode{
     font-weight: 500;
     font-size: 1rem;
     text-align: center;
-    color: rgb(255, 112, 112);
+    color: var(--secondary);
 }
 .intro__info--1 ul, .intro__info--2 {
     font-size: 0.8rem;
 }
-.intro__info--2 {text-align: center;}
+.intro__info--2 {
+    text-align: center;
+}
 li{
     margin: 0.5rem 0;
 }
 .projects__list{
-    background-color: rgba(100, 180, 255, 0.281);
+    border: 3px solid var(--primary-cyan);
+    /* background-color: var(--primary-cyan); */
+    color: var(--primary-cyan);
     backdrop-filter: blur(10px);
     width: 90%;
     margin: 0 auto;
-    border-radius: 1rem;
+    border-radius: 0.3rem;
     min-height: 10rem;
     padding: 0.5rem;
     animation: fade-in 0.9s;
 }
 .dark-mode .projects__list{
-    color: rgba(255, 255, 255, 0.623);
+    background-color: #f7feff;
+    color: var(--dark-mode-bg);
+}
+hr{
+    width: 70%;
+    margin: 0 auto;
+    border: 1px solid var(--primary-cyan);
 }
 
 .projects__list ul{
     list-style-type: none;
+    line-height: 1.4rem;
     padding: 0px;
 }
 .projects__list li {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.397);
     padding: 0.5rem;
-    padding-left: 2rem;
+    padding-left: 1rem;
+    width: 80%;
+    margin: 0 auto;
 }
 .dark-mode .projects__list li {
-    color: white;
+    color: var(--secondary);
 }
-
+.projects__list a{
+    font-size: smaller;
+    color: var(--secondary)
+}
+.projects__list a:hover{
+    color: #ff8e25;
+}
 a{
     text-decoration: none;
-    color: rgb(36, 111, 172);
+    color: var(--links);
 }
 .dark-mode a{
-    color: rgb(151, 199, 238);
+    color: var(--dark-mode-bg);
 }
 a:hover{
     text-decoration: underline;
@@ -169,14 +197,16 @@ a:hover{
     border-radius: 7px;
 }
 #topic__description{
+    color: var(--secondary);
     text-align: center;
     padding: 0.4rem;
 }
 .notes-main{
     margin: 0 auto;
-    border-radius: 7px;
+    border-radius: 0.4rem;
     max-width: 70%; 
-    background-color: rgba(100, 180, 255, 0.281);
+    background-color: var(--primary-cyan);
+    color: var(--background-white);
     padding: 2rem;
 }
 
@@ -194,10 +224,10 @@ a:hover{
 
 
 .emph_3{
-    color: #ffabab;
+    color: var(--secondary);
 }
 .emph_4{
-   
+   color: #070e1a;
     background-color: whitesmoke;
     padding: 0.2rem;
     border-radius: 7px;
@@ -208,16 +238,16 @@ a:hover{
 }
 
 .emph_4 .const{
-    color: rgb(77, 205, 255);
+    color: #0085b9;
 }
 .emph_4 .symbol{
     color: #e1b700;
 }
 .emph_4 .string{
-    color: rgb(220, 220, 0);
+    color: #ffaf02;
 }
 .emph_4 .method{
-    color: rgb(154, 221, 54);
+    color: rgb(80, 133, 0);
 }
 .notes-list{
     font-size: 0.8rem;
@@ -234,11 +264,11 @@ input{
 button{
     min-width: 5rem;
     margin: 10px;
-    background-color: #4e8cff;
+    background-color: var(--dark-mode-bg);
     border-radius: 5px;
     border: none;
     padding: 0.5rem;
-    color: white;
+    color: var(--secondary);
     transition: all 0.5s;
 }
 .dark-mode button{
@@ -248,6 +278,10 @@ button{
 button:hover{
     border: 1px solid #FFFFFF;
 }
+label{
+    display: block;
+}
+
 textarea{
     min-width: 28rem;
     border-radius: 7px;
@@ -273,7 +307,7 @@ footer{
 @keyframes slide{
     from{
         width: 5%;
-        background-color: rgb(255, 112, 112);
+        background-color: var(--secondary);
     }
 }
 @keyframes slide-in{
@@ -289,10 +323,7 @@ footer{
 }
 
 @media screen and (min-width: 800px) {
-    #header--text:hover{
-        background: #ffffff00;
-        
-    }
+    
     .progress-bar{
         height: 0.8rem;
     }
