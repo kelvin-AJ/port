@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../style.css">
+        <title>Week 5</title>
+    </head>
+    <body>
+        <header id="topic__name">
+            <h1>Week 05 Activity</h1>
+            <p id="topic__description">
+                Notes from reading exercises and links to practice.
+            </p>
+        </header>
+        <main class="notes-main">
+            <ul class="notes-list" id="click">
+                <li>
+                    <span class="emph">Testing and Debugging</span>
+                    <ol>
+                        <li>Errors are usually caused by: the system or external devices that interact with the program, problems in the program such as wrong syntax or faulty logic, or incorrect data entered by the user that the program cannot handle.</li>
+                        <li>exceptions are errors that produce return values that we can use to handle those errors.</li>
+                        <li>A stack trace is s sequence of method calls that lead to the point where the error occurred.</li>
+                        <li>An expert programmer should let errors occur loudly during development so they can be identified and fixed quickly. While in production, errors should occur gracefully, so the user experience is not affected.</li>
+                        <li>Writing code in strict mode can help to improve its clarity and speed since it follows conventions and will throw exceptions if any sloppy code practices are used.</li>
+                        <li>We activate strict mode by adding the string 'use strict' at the first line of our script file</li>
+                        <li>We can also use strict mode for individual functions by adding 'use strict' as the first line of the function.</li>
+                        <li>Linting tools test the quality of code beyond strict mode. They are useful in enforcing a programming style guide, especially when working with a team so everyone follows the same conventions.</li>
+                        <li>To implement feature detection, we wrap whatever 'dangerous' method we want to use in if statements that check if the object exists before running them.</li>
+                        <li>When debugging, we run through the program to see what happens at different points of its execution. With breakpoints, we can pause the execution at specific points and view the values of different variables at that point in the program's execution.</li>
+                        <li>we can use alerts to set breakpoints because the program actually stops running until the ok button is clicked.</li>
+                        <li>We can also use the console by logging the value of variables at strategic points in our program. This does not stop code execution like the alert.</li>
+                        <li>debugger command sets breakpoints in the program so the debugger pauses execution at those points.</li>
+                        <li>error objects can be created by the host or in the code when an exception occurs by using the error constructor function: <br /><span class="emph_4">const <span class="const">error </span> = new <span class="method">Error</span>(<span class="string">'error message goes here'</span>);</span></li>
+                        <li>The 'throw' statement causes the program to stop</li>
+                        <li>If we suspect a piece of code will result in an exception, we can wrap it in a try block. This will run the code inside the block as normal, but if an exception occurs it will pass the error object that is thrown onto a catch block. </li>
+                        <li>A finally block can be added after a catch block, anything in the finally block would be executed regardless of whether an extension occurred or not.</li>
+                        <li>Test-driven development (TDD) is the process of writing tests before any actual code. Following this principle results in the following workflow:</li>
+                        <li>Write tests (that initially fail), Write code to pass the tests, Refactor the code, Test refactored code, and Write more tests for new features.</li>
+                    </ol>
+                </li>
+                <li><a href="./projects/week05_teamassignment/index.html">Hikes [Team Activity]</a></li>
+            </ul>
+        </main>
+        <footer>
+            © 2022 Ola K. Ajibola
+        </footer>
+        <script src="./projects/numberCruncher.test.js"></script>
+        <script src="./script.js"></script>
+    </body>
+</html>

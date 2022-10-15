@@ -15,7 +15,7 @@ const skills = [
     },
     {
         skillName : "Web Frontend II",
-        progress : 20
+        progress : 36
     }
 ]
 
@@ -33,12 +33,12 @@ const links = [
         url: "week3/index.html"
     },
     {
-        label: "Week4 notes",
+        label: "Forms, Object-Oriented Programming and Modular Javascript",
         url: "week4/index.html"
     },
     {
         label: "Week5 notes",
-        url: "week1/index.html"
+        url: "week5/index.html"
     },
     {
         label: "Week6 notes",
