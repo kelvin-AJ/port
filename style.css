@@ -8,6 +8,7 @@
 
 * {
     margin: 0px;
+    padding-left: 0.1rem;
 }
 .progress-bar{
     height: 0.5rem;
@@ -319,6 +320,9 @@ footer{
 }
 
 @media screen and (min-width: 800px) {
+    ul, li {
+        padding-left: 1rem;
+    }
     
     .progress-bar{
         height: 0.8rem;
