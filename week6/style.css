@@ -1,0 +1,155 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #ffdf9e;
+}
+		
+header {
+    text-align: center;
+    padding: 2rem;
+    color: #084C61;
+    font-size: 3rem;
+}
+
+main{
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.empty {
+    font-size: 1rem;
+    text-align: center;
+    display: block;
+    margin-top: 2rem;
+    color: #084c6179;
+}
+/* MY CLASSes */
+.todos {
+    display: grid;
+    grid-template-rows: 1fr 3rem;
+    min-height: 6rem;
+    background-color: #fffdf8;
+    border-radius: 7px;
+    overflow: hidden;
+}
+.todos-main {
+    min-height: 5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.todos-main li{
+    margin: 0.3rem 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 2.5rem;
+}
+.todos-main li .checkbox{
+    margin: 0.3rem;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid #050517;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.todos-main li.completed .title{
+    text-decoration: line-through;
+    color: #05051791;
+}
+
+.todos-main li.completed .checkbox{
+    background-color: #177E89;
+}
+
+.todos-main li .close-btn{
+    margin-left: auto;
+    padding: 1rem;
+    border: none;
+    background-color: #FFFFFF;
+}
+
+.todos-info {
+    margin-top: auto;
+    background-color: whitesmoke;
+    height: 2.5rem;
+    display: grid;
+    grid-template-columns: 0.7fr 1.5fr;
+    justify-items: center;
+    align-items: center;
+    color: #084C61;
+}
+.todos-info .filter-list{
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1.5fr;
+    height: 100%;
+    width: 100%;
+}
+.todos-info .filter-list button{
+    width: 100%;
+    border: none;
+    background-color: #177E89;
+    color: white;
+    font-size: 0.85rem;
+}
+.todos-info .filter-list button.active{
+    background-color: #084C61;
+    color: whitesmoke;
+}
+
+
+.add-todo {
+    justify-self: center;
+    position: absolute;
+    bottom: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 5rem;
+    width: 90%;
+    border-radius: 7px;
+    overflow: hidden;
+    box-shadow: 0 0 1px #050517;
+    transition: all 0.3s;
+}
+.add-todo input{
+    height: 3rem;
+    border-radius: 0px;
+    border: none;
+    border-right: none;
+    text-align: center;
+}
+.add-todo input:focus{
+    outline: none;
+    box-shadow: 0 0 3px #050517;
+}
+
+
+.add-todo #add-btn{
+    border-radius: 0px;
+    border: none;
+    padding: 0rem;
+    font-size: 2rem;
+    color: #FFFFFF;
+    background-color: #084C61;
+}
+
+.add-todo #add-btn:active{
+    background-color: #177E89;
+}
+
+
+/* color: #DB3A34; */

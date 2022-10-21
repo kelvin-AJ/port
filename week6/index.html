@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css">
+        <title>To-Do List</title>
+    </head>
+    <body>
+        <header>Todos</header>
+        <main>
+            <div class="todos">
+                <ul class="todos-main">
+                    
+                </ul>
+                <div class="todos-info">
+                    <span class="tasks-num">0 tasks left</span>
+                    <span class="filter-list">
+                        <button id="filter-all" class="active">All</button>
+                        <button id="filter-active">Active</button>
+                        <button id="filter-completed">Completed</button>
+                    </span>
+                </div>
+            </div>
+            <div class="add-todo">
+                <input id="todo-input" type="text" placeholder="What are we doing today?"/>
+                <button id="add-btn" type="button">+</button>
+            </div>
+        </main>
+        <script type="module" src="./main.js"></script>
+    </body>
+</html>
