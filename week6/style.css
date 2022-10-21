@@ -44,9 +44,12 @@ main{
     overflow: hidden;
 }
 .todos-main {
-    min-height: 5rem;
+    min-height: 4rem;
+    max-height: 65vh;
+    overflow: scroll;
     display: grid;
     grid-template-columns: 1fr;
+    transition: all 0.3s;
 }
 
 .todos-main li{
@@ -117,8 +120,7 @@ main{
     justify-self: center;
     position: absolute;
     bottom: 1rem;
-    display: grid;
-    grid-template-columns: 1fr 5rem;
+    display: flex;
     width: 90%;
     border-radius: 7px;
     overflow: hidden;
@@ -131,25 +133,40 @@ main{
     border: none;
     border-right: none;
     text-align: center;
+    width: 100%;
 }
 .add-todo input:focus{
     outline: none;
     box-shadow: 0 0 3px #050517;
 }
 
-
-.add-todo #add-btn{
+.add-todo .add-btn{
     border-radius: 0px;
     border: none;
     padding: 0rem;
     font-size: 2rem;
     color: #FFFFFF;
     background-color: #084C61;
+    width: 5rem;
+    transition: all 0.3s;
+}
+
+.add-todo .hide{
+    width: 0px;
 }
 
 .add-todo #add-btn:active{
     background-color: #177E89;
 }
 
+::-webkit-scrollbar{
+    width: 0.5rem;
+    height: 0px;
+}
 
-/* color: #DB3A34; */
+::-webkit-scrollbar-thumb{
+    background-color: #084C61;
+    border-radius: 1rem;
+}
+
+

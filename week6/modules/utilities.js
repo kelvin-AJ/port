@@ -18,8 +18,10 @@ export default class todoApp{
         this.filterListBtns.addEventListener("click", this.filterListAndRender);
         this.addBtn.addEventListener("click", this.addTodo.bind(this));
         this.todosMain.addEventListener("click", this.manageList.bind(this));
-        this.filterListBtns.addEventListener("click", this.filteredListRender.bind(this))
-
+        this.filterListBtns.addEventListener("click", this.filteredListRender.bind(this));
+        this.todoInput.addEventListener("focus", () => {
+            this.addBtn.classList.remove("hide");
+        });
     }
 
     appendDOMListItem(listItem){
@@ -42,11 +44,16 @@ export default class todoApp{
         
         if(title != ""){
             this.todoListObj.addItem(title);
-            this.appendDOMListItem(this.todoListObj.getTodoItemByTitle(title));
+            if(this.todoListObj.getToDoList().length == 1){
+                this.renderList(this.todoListObj.getToDoList())
+            }else{
+                this.appendDOMListItem(this.todoListObj.getTodoItemByTitle(title));
+            }
             this.todoInput.value = "";
         }
 
         this.renderTaskNumber();
+        this.addBtn.classList.add("hide");
     }
 
     // List Rendering
