@@ -93,9 +93,9 @@ export default class todoApp{
 
     // LIST ITEM MANAGEMENT
     manageList(event) {
-        const id = Number(event.target.closest("li").id.slice(4));
+        const id = Number(event.target.closest("li")?.id.slice(4));
         const item = this.todoListObj.getTodoItemById(id);
-        const clickedFunction = event.target.closest("button").className;
+        const clickedFunction = event.target.closest("button")?.className;
         if(clickedFunction === "close-btn"){
             this.todoListObj.deleteItem(id);
             this.renderList(this.todoListObj.getToDoList())
