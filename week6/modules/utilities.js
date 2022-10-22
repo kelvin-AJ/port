@@ -3,6 +3,7 @@ import TodoList from "./todos.js";
 export default class todoApp{
 
     constructor(){
+        // SELECT ALL DOM ELEMENTS
         this.todoListObj = new TodoList();
         this.todosMain = document.querySelector(".todos-main");
         this.tasksNum = document.querySelector(".tasks-num");
@@ -10,15 +11,22 @@ export default class todoApp{
         this.addBtn = document.querySelector("#add-btn");
         this.filterListBtns = document.querySelector(".filter-list");
 
+
+        // RENDER LIST AND ATTACH EVENT LISTENERS
         this.renderList(this.todoListObj.getToDoList())
         this.addEventListeners()
     }
 
     addEventListeners(){
+        // ADD EVENT LISTENERS TO DOM ELEMENTS
         this.filterListBtns.addEventListener("click", this.filterListAndRender);
         this.addBtn.addEventListener("click", this.addTodo.bind(this));
         this.todosMain.addEventListener("click", this.manageList.bind(this));
         this.filterListBtns.addEventListener("click", this.filteredListRender.bind(this));
+
+        // non-critical events
+
+        document.addEventListener("keypress", this.keyPressaddTodo.bind(this))
         this.todoInput.addEventListener("focus", () => {
             this.addBtn.classList.remove("hide");
         });
@@ -37,6 +45,10 @@ export default class todoApp{
                     </button>
                 </li>
                 `)
+    }
+
+    keyPressaddTodo(event){
+        if(event.key == "Enter") this.addTodo();
     }
 
     addTodo(){
