@@ -15,7 +15,7 @@ const skills = [
     },
     {
         skillName : "Web Frontend II",
-        progress : 36
+        progress : 48
     }
 ]
 
@@ -37,22 +37,13 @@ const links = [
         url: "week4/index.html"
     },
     {
-        label: "Week5 notes",
+        label: "Testing and Debugging",
         url: "week5/index.html"
     },
     {
         label: "To-do App",
         url: "week6/index.html"
-    },
-    {
-        label: "Week7 notes",
-        url: "week1/index.html"
-    },
-    {
-        label: "Week8 notes",
-        url: "week1/index.html"
     }
-
 ]
 
 const renderSkills = function(skills) {

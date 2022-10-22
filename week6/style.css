@@ -25,6 +25,7 @@ main{
     display: grid;
     width: 90%;
     margin: 0 auto;
+    max-width: 25rem;
 }
 
 .empty {
@@ -126,6 +127,8 @@ main{
     overflow: hidden;
     box-shadow: 0 0 1px #050517;
     transition: all 0.3s;
+    max-width: 25rem;
+
 }
 .add-todo input{
     height: 3rem;
