@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="./stylePractice.css">
+        <title>Week 8</title>
+    </head>
+    <body>
+        <header id="topic__name">
+            <h1>Week 08 Activity</h1>
+            <p id="topic__description">
+                Notes from reading exercises and links to practice.
+            </p>
+        </header>
+        <main class="notes-main">
+            <ul class="notes-list" id="click">
+                <li>
+                    <span class="emph">CSS3 Transforms and Transitions</span>
+                    <ol>
+                        <li>
+                            The CSS3 <span class="emph_4">transform</span> property lets us translate, scale and/or skew any element on the webpage.
+                        </li>
+                        <li>
+                            <span class="emph_4">transform: <span class="method">translate</span>(-10px, -10px)</span> :<br>
+                            <div class="testdiv translate">hover to translate</div>
+                            To move elements vertically or horizontally, we use the <span class="emph_4">translateX</span> or <span class="emph_4">translateY</span> property. Transform don't work on inline elements
+                        </li>
+                        <li>
+                            <span class="emph_4">transform: <span class="method">scale</span>(0.8, 1.5)</span> :<br>
+                            <div class="testdiv scale">hover to scale</div>
+                            We can alse use <span class="emph_4">scaleX</span> and <span class="emph_4">scaleY</span> to scalre horizontally or vertically.
+                        </li>
+                        <li>
+                            Declaring a second transform to the same element would overwrite the first. To add multiple transform attributes, separate attibutes with a space.
+                        </li>
+                        <li>Transforming does not cause a reflow</li>
+                        <li>
+                            <span class="emph_4">transform: <span class="method">rotate</span>(30deg)</span> :<br>
+                            <div class="testdiv rotate">hover to rotate</div>
+                            rotation happens clockwise.
+                        </li>
+                        <li>
+                            <span class="emph_4">transform: <span class="method">skew</span>(-30deg, -10deg)</span> :<br>
+                            <div class="testdiv skew">hover to skew</div>
+                        </li>
+                        <li>we can manipulate the origin of our transform using the <span class="emph_4">tranform-origin</span> property. this is especially useful for shapes like cicles or ellipses that look the same if their center of roation is at their center.
+                        </li>
+                        <li>
+                            The order fo transform functions matter, The effect is applied one after the other. Almost like one function returns a new version of that element that has been transformed
+                        </li>
+                        <li>
+                            CSS Transitions allow the values of CSS properties to change over time.
+                            The <span class="emph_4">transition-property</span> property defines the CSS properties of the element that should be transitioned. The <span class="emph_4">transition-duration</span> property sets how long the transition will take.
+                            The <span class="emph_4">transition-timing-function</span> lets you control the pace of the transition in more detail. 
+                        </li>
+                        <li>We cal have mulitple transition propertues by separating them with commas. </li>
+                        <li>Generally, it is best to use CSS for simple-state changes in a mobile environment. But it's still better to employ JavaScript for intricate, stateful UIs, and when you do, you'll likely want to use a JavaScript animation library to help with manageability and performance.</li>
+                        <li>
+                            Animated element using keyframes:<br>
+                            <div class="moving-circle"></div>
+                        </li>
+                        <li>
+                            The <span class="emph_4">animation-fill-mode</span> property defines what happens before the first animation iteration begins and after the last animation iteration concludes
+                        </li>
+                        <li>When using the shorthand property, animation names that are also animation property key term such as forwards, running, or alternate should not be used.</li>
+                    </ol>
+                </li>
+            </ul>
+        </main>
+        <footer>
+            © 2022 Ola K. Ajibola
+        </footer>
+        <script src="./script.js"></script>
+    </body>
+</html>

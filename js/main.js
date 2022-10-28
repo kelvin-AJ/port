@@ -43,6 +43,14 @@ const links = [
     {
         label: "To-do App",
         url: "week6/index.html"
+    },
+    {
+        label: "Advanced Functions, AJAX",
+        url: "week7/index.html"
+    },
+    {
+        label: "Transforms and Transitions, Canvas, SVG and Drag and Drop",
+        url: "week8/index.html"
     }
 ]
 
@@ -90,4 +98,3 @@ activateTheme()
 
 renderSkills(skills);
 renderLinks(links);
-

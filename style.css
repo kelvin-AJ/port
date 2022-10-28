@@ -3,7 +3,7 @@
     --primary-cyan : #02485ade;
     --dark-mode-bg : #012129de;
     --secondary : #eb7405;
-    --links : #e4faffde;
+    --links : #fff9e4de;
 }
 
 * {
@@ -31,7 +31,6 @@
 .bold{
     font-weight: bolder;
 }
-
 
 body{
     background-color: var(--background-white);
@@ -133,16 +132,15 @@ li{
     margin: 0.5rem 0;
 }
 .projects__list{
-    border: 2px solid var(--primary-cyan);
-    /* background-color: var(--primary-cyan); */
-    color: var(--primary-cyan);
+    background-color: var(--primary-cyan);
+    color: var(--background-white);
     backdrop-filter: blur(10px);
-    width: 90%;
     margin: 0 auto;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     min-height: 10rem;
     padding: 0.5rem;
     animation: fade-in 0.9s;
+    width: 90%;
 }
 .dark-mode .projects__list{
     background-color: #f7feff;
@@ -151,8 +149,7 @@ li{
 hr{
     width: 70%;
     margin: 0 auto;
-    /* border: 1px solid var(--primary-cyan); */
-    background-color: var(--primary-cyan);
+    opacity: 0.4;
 }
 
 .projects__list ul{
@@ -171,7 +168,7 @@ hr{
 }
 .projects__list a{
     font-size: smaller;
-    color: var(--secondary)
+    color: var(--links);
 }
 .projects__list a:hover{
     color: #ff8e25;
@@ -245,6 +242,19 @@ a:hover{
     font-size: 0.8rem;
     line-height: 1.5rem;
 }
+.table{
+    border: 2px solid #070e1a;
+    padding: 1rem;
+    
+}
+.dark-mode .table {
+    border-color: #ffffff;
+    
+}
+::-webkit-scrollbar{
+    display: none;
+}
+
 input{
     margin: 1rem;
     height: 2.5rem;
@@ -349,15 +359,8 @@ footer{
         align-self: flex-end;
         text-align: right;
     }
+    .projects__list{
+        width: 90%;
+    }
 
 }
-.table{
-    border: 2px solid #070e1a;
-    padding: 1rem;
-    
-}
-.dark-mode .table {
-    border-color: #ffffff;
-    
-}
-
