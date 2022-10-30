@@ -17,16 +17,46 @@
         <main class="notes-main">
             <ul class="notes-list" id="click">
                 <li>
-                    <span class="emph">Further Functions</span>
+                    <span class="emph">Further Functions(Examples in JS file) :</span>
                     <ol>
-                        
+                        <li>The call() method can be used to set the value of 'this' inside a function to an object that is provided as the first argument.</li>
+                        <li>If a function doesn’t refer to an object as this in its body, it can still be called using the call() method, but you need provide null as its first argument;</li>
+                        <li>The 'apply()' method works the same way, only that the parameters are passed in an array</li>
+                        <li>We can add preperties to functions just as we can to normal objects</li>
+                        <li>Memoization involves the use of a "cache" property assigned to a function to store results whenever the function runs. This is especially useful for functions that take time to run so it saves time by simply returning values already stored for reused arguments.</li>
+                        <li>IIFE are anonymous functions that are called immediately they are defined</li>
+                        <li>Placing any code that uses any temporary variables inside an IIFE will ensure it’s only available while the IIFE is invoked, then it will disappear. This reduces the chances of the global namespace being polluted.</li>
+                        <li>IIFEs are alse useful to set up initialization code that won't be needed again.</li>
+                        <li>To avoid enforcing strict mode on every javascript in the file, the recommended way to use strict mode is to place all strict code inside an IIFE.</li>
+                        <li>functions in javascript can, call, define and even redefine themselves.</li>
+                        <li>With Init-Time Branching, we can redefine a function based on the presence of a feature.</li>
+                        <li>A recursive function is one that calls itself until a certain condition is met.</li>
+                        <li>callback functions are functions passed to other functions as arguments and then invoked inside the function they are passed to</li>
+                        <li>Call back hell occurs when we have to nest multiple callback functions in each other, usually because of their asynchronous nature.</li>
+                        <li>Event-driven Asynchronous Programming ensure that waiting for tasks such as events and other time taking functions does not hold up execution of other parts of the program.</li>
+                        <li>Promises represent the future result od asynchronous operations. Like a placeholder while we wait for the outcomes of an asynchronous task. A settled promise can result in two outcomes: Resolved or Rejected.</li>
+                        <li>We can chain multiple promises.</li>
+                        <li>Async functions were added to the ES2017 specification. These functions are preceded by the async keyword and allow you to write asynchronous code as if it was synchronous.</li>
+                        <li>We can have functions return other functions</li>
+                        <li>A closure gives a function access to all the variables of its parent function or "it's birthplace" even after it has been reassigned.</li>
+                        <li>Pure functions adhere to the following rules: <ul>
+                            <li>The return value of a pure function should only depend on the values provided as arguments. It doesn't rely on values from somewhere else in the program.</li> <li> There are no side-effects. A pure function doesn't change any values or data elsewhere in the program. It only makes non-destructive data transformations and returns new values, rather than altering any of the underlying data. </li><li>Referential transparency. Given the same arguments, a pure function will always return the same result.</li>
+                        </ul></li>
+                        <li>Higher-Order Functions are functions that accept other functions as arguments and/or returns another function.</li>
+                        <li>Curring involves nesting functions into other functions such that the inititial function can take one parameter and then return a function that takes another and the chain can go on until all parameter are available at the last function.This "function call chaining" is useful when other needed parameter are ot readily available.</li>
                     </ol>
+                </li>
+                <li>
+                    <a href="./countryinfo/index.html">Country Information(AJAX PRACTICE)</a>
+                </li>
+                <li><a href="../week2/quiz/index.html">Quiz Ninja.html</a>
                 </li>
             </ul>
         </main>
         <footer>
             © 2022 Ola K. Ajibola
         </footer>
+        <script src="./ajax.js"></script>
         <script src="./script.js"></script>
     </body>
 </html>
