@@ -22,7 +22,7 @@
         <script>
         
 
-
+// OPTIONS FOR FETCH. OPTIONS INCLUDE THE METHOD[GET] AND THE HEADERS. More on headers is found on sitepoint. I copied this from the api source.
          const options = {
 	method: 'GET',
 	headers: {
@@ -30,18 +30,27 @@
 		'X-RapidAPI-Host': 'ajayakv-rest-countries-v1.p.rapidapi.com'
 	}
 };
+
+
+// SELECT FORM
 const form = document.forms['form'];
+// Listen for form submission
 form.addEventListener("submit", (e) => {
+
+    // prevent reload
     e.preventDefault()
+
+    // Prepare form input to be passed into fecth url
     let countryName = new FormData(form).get("country");
     countryName = countryName.toLowerCase().trim()
     
+    // use fetch by passing country name using template literals
     fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`, options)
         .then(response => response.json())
         .then(([response]) => {
-            console.log(response)
+            // response is destructured in the parameter
 
-            console.log()
+            // Prepare HTML using template literal and append to selected div
             document.querySelector("#country-data").innerHTML = `<ul>
                     <h1>${response.name.official}</h1>
                     <img width="150px" src="${response.flags.svg}" alt="${response.name.official} Flag">
@@ -53,6 +62,8 @@ form.addEventListener("submit", (e) => {
                 </ul>`
         
         })
+
+        // Catch anny error and handle in a clean manner
         .catch(err => {
             document.querySelector("#country-data").innerHTML = `<h3>Sorry, 🥴!</h3><p>we couldn't find the country you asked for, Please check the spelling and try again</p>`
         });
