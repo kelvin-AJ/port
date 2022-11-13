@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Working with API</title>
+        <style>
+            body{
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            header{
+                text-align: center;
+            }
+            .main-container{
+                margin: auto;
+                border: 3px solid #8989ff;
+                border-radius: 0.3rem;
+            }
+            .main-container h2{
+                text-align: center;
+            }
+            .main-container-list{
+                border: 1px solid #6868f4;
+                border-radius: 0.3rem;
+                min-height: 5rem;
+                margin: 0.3rem;
+            }
+            li{
+                border-top: 1px solid #797979;
+            }
+            .btn-container{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+                justify-items: center;
+            }
+            button{
+                height: 3rem;
+                background-color: none;
+                border: 2px solid #808080;
+                padding: 0.3rem;
+                border-radius: 0.3rem;
+            }
+            button:active{
+                padding: 0.5rem;
+                background-color: #6868f4;
+            }
+        </style>
+    </head>
+    <body>
+        <header><h1>SWAPI</h1></header>
+        <main>
+            <div class="main-container">
+                <h2>People</h2>
+                <ul class="main-container-list">
+                    
+                </ul>
+                <div class="btn-container">
+                    <button id="prev">Prev</button>
+                    <button id="next">Next</button>
+                </div>
+                
+            </div>
+            
+        </main>
+        <script src="./script.js"></script>
+    </body>
+</html>

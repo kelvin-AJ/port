@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang='en'>
+    <head>
+        <meta charset='utf-8'>
+        <title>Animation Example</title>
+        <link rel='stylesheet' href='styles.css'>
+    </head>
+    <body>
+        <div id='square'></div>
+        <script>
+            const squareElement = document.getElementById('square');
+let angle = 0;
+
+function rotate() {
+    angle = (angle + 2)%360;
+    squareElement.style.transform = `rotate(${angle}deg)`
+    window.requestAnimationFrame(rotate);
+}
+
+const id = requestAnimationFrame(rotate);
+        </script>
+    </body>
+</html>

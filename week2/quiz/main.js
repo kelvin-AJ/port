@@ -23,6 +23,7 @@ const quiz = [
 // View Object
 const view = {
     start: document.getElementById('start'),
+    timer: document.querySelector('#timer strong'),
     score: document.querySelector('#score strong'),
     question: document.getElementById('question'),
     result: document.getElementById('result'),
@@ -81,6 +82,15 @@ const game = {
         this.questions = [...quiz];
         view.setup();
         this.ask();
+        this.secondsRemaining = 20;
+        this.timer = setInterval( this.countdown , 1000 );
+    },
+    countdown() {
+        game.secondsRemaining--;
+        view.render(view.timer,game.secondsRemaining);
+        if(game.secondsRemaining < 0) {
+            game.gameOver();
+        }
     },
     ask(name){
         if(this.questions.length > 0) {
@@ -109,6 +119,7 @@ const game = {
     gameOver(){
         view.render(view.info,`Game Over, you scored ${this.score} point${this.score !== 1 ? 's' : ''}`);
         view.teardown();
+        clearInterval(this.timer);
     }
 }
 

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../style.css">
+        <title>Week 9</title>
+    </head>
+    <body>
+        <header id="topic__name">
+            <h1>Week 09 Activity</h1>
+            <p id="topic__description">
+                Notes from reading exercises and links to practice.
+            </p>
+        </header>
+        <main class="notes-main">
+            <ul class="notes-list" id="click">
+                <li>
+                    <span class="emph">The window Object, HTML5 APIs</span>
+                    <ul>
+                    <li>Use <span class="emph_4">alert</span>, <span class="emph_4">confirm</span> and <span class="emph_4">prompt</span> methods with care. They stop code execution until the user responds. </li>
+	<li>The replace() method is almost the same as the assign() method, except the current page, will not be stored in the session history, so the user will be unable to navigate back to it using the back button.</li>
+	<li>Many methods and properties in the window object were abused in the past for dubious activities such as user-agent sniffing. These practices have now been superseded by better practices.</li>
+	<li>The replace() method is almost the same as the assign() method, except the current page, will not be stored in the session history, so the user will be unable to navigate back to it using the back button.</li>
+	<li>Many methods and properties in the window object were abused in the past for dubious activities such as user-agent sniffing. These practices have now been superseded by better practices.</li>
+	<li>The use of document.write() method is rarely a good idea. It's heavily frowned upon.</li>
+	<li>Cookies are small files(4kb max per cookie) that are saved locally on a user's computer. They can be used by personalizing a user's browsing experience, storing user preferences, keeping track of user choices (such as a shopping cart), authentication and tracking users.</li>
+	<li>Cookies are session cookies by default.  Cookies can be made persistent by adding "; expires=date" to the end of the cookie when it's set, where date is a date value in the UTC String format Day, DD-Mon-YYYY HH:MM:SS GMT.</li>
+	<li>Applications that contain sensitive information shouldn't rely on cookies expiring using these methods</li>
+	<li>It is possible to set the path and domain where a cookie can be read</li>
+	<li>Adding the string '; secure' to the end of a cookie will ensure it's only transmitted over a secure HTTPS network</li>
+	<li>To delete a cookie, we need to set it to expire at a time in the past</li>
+	<li>LocalStorage has no actual storage capacity but most browsers have a limit set to 5Gb per domain.</li>
+	<li>Any data stored does not automatically expire as it does with cookies</li>
+	<li>'The Service Worker API allows a worker script to run in the background with the added benefit of being able to intercept network requests. This allows you to take alternative action if the network is offline, and effectively create app-like offline experiences'</li>
+    </ul>
+    <br>
+    <span class="emph">Exercises</span><br />
+                    <button id='rainbow'>Change Color</button>
+                    <button id='reset'>Reset Color</button>
+                    <form>
+                        <label for='number'>Enter a Number to Factorize:</label>
+                        <input id='number' type='number' name='number' min=1 value='20'>
+                        <button type='submit'>Submit</button>
+                    </form>
+                    <div id='output'></div>
+                </li>
+                <li>
+                    <form>
+                        <label for='message'>Enter a Message:</label>
+                        <input type='text' name='message'>
+                        <button type='submit'>Submit</button>
+                    </form>
+                    <div id='output-2'></div>
+                </li>
+
+                <li><a href="../week2/quiz/index.html">Quiz Ninja</a></li>
+            </ul>
+        </main>
+        <footer>
+            © 2022 Ola K. Ajibola
+        </footer>
+        <script src="./script.js"></script>
+    </body>
+</html>

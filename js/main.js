@@ -15,7 +15,7 @@ const skills = [
     },
     {
         skillName : "Web Frontend II",
-        progress : 48
+        progress : 55
     }
 ]
 
@@ -51,6 +51,10 @@ const links = [
     {
         label: "Transforms and Transitions, Canvas, SVG and Drag and Drop",
         url: "week8/index.html"
+    },
+    {
+        label: "The window Object, HTML5 APIs",
+        url: "week9/"
     }
 ]
 
