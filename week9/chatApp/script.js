@@ -27,7 +27,7 @@ userSelectArea.addEventListener("click", event => {
 })
 
 // "ws://192.168.108.37:8085"
-const webSocket = new WebSocket('wss://chatapp-byui-wdd330.herokuapp.com/')
+const webSocket = new WebSocket('ws://192.168.108.37:4500')
 
 webSocket.addEventListener("open", event => {
 
@@ -60,7 +60,7 @@ const renderMessages = function(obj) {
     chatArea.innerHTML = "";
     
     obj.forEach(message => {
-        chatArea.insertAdjacentHTML("beforeend", 
+        chatArea.insertAdjacentHTML("afterbegin", 
         `<div class="text-box ${message.user == currentUser ? "text-box-me" : "text-box-other"}">${message.message}</div>`)
     })
 }

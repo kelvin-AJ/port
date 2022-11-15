@@ -10,24 +10,22 @@ main{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 3rem;
-    max-width: 20rem;
-    border-radius: 1rem;
     overflow: hidden;
     min-height: 30rem;
-    height: 90%;
-    background-color: black;
+    height: 96vh;
+    background-color: #000000;
+    /* background-image: url("https://d1dxs113ar9ebd.cloudfront.net/225batonrouge/2019/07/food.jpg?q=70&crop=faces&fit=crop&w=1300&h=600"); */
+    background-repeat: no-repeat;
+    background-size: cover;
     transition: all 0.3s;
-    position: fixed;
-    left: 28%;
-    top: 5%;
 }
 
 .chat-area {
     height: fit-content;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     margin-top: auto;
-    max-height: 80vh;
+    max-height: 90vh;
     overflow: scroll;
 }
 .text-box {
@@ -45,13 +43,13 @@ main{
 .text-box-me {
     margin-top: auto;
     margin-left: auto;
-    background-color: #1d89fc;
+    background-color: #1db5fc;
     color: white;
 }
 .text-box-other {
     margin-right: auto;
-    background-color: #cee6ff;
-    color: black;
+    background-color: #07c264;
+    color: #ffffff;
 }
 form{
     display: flex;
@@ -74,7 +72,7 @@ form input:focus{
 }
 
 form button{
-    background-color: #1d89fc;
+    background-color: #1ea1d4;
     color: white;
     width: 30%;
 }
