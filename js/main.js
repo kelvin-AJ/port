@@ -55,6 +55,10 @@ const links = [
     {
         label: "The window Object, HTML5 APIs",
         url: "week9/"
+    },
+    {
+        label: "Something else",
+        url: "week10/"
     }
 ]
 

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../style.css">
+        <style>
+            form{
+                display: grid;
+                justify-items: flex-start;
+            }
+            input#choose{
+                z-index: 1;
+                margin-bottom: 0px;
+                margin-left: 0px;
+                width: 20rem;
+            }
+            input#choose:invalid {
+                outline: none;
+                border: 2px solid #da5a04;
+            }
+
+            input#choose:valid {
+                outline: none;
+                border: 2px solid #6be632;
+            }
+            .error{
+                z-index: 0;
+                display: block;
+                margin: none;
+                padding: none;
+                width: 20rem;
+                color: #da5a04;
+                border-bottom-left-radius: 0.4rem;
+                border-bottom-right-radius: 0.4rem;
+                transform: translate(2px);
+                text-align: center;
+                background-color: #012129de;
+                transition: all 0.2s;
+            }
+            .hidden{
+                transform: translateY(-2rem);
+                opacity: 0;
+            }
+            
+        </style>
+
+        <title>Week 10</title>
+    </head>
+    <body>
+        <header id="topic__name">
+            <h1>Week 10 Activity</h1>
+            <p id="topic__description">
+                Notes from reading exercises and links to practice.
+            </p>
+        </header>
+        <main class="notes-main">
+            <ul class="notes-list" id="click">
+                <li>
+                <span class="emph">Form Validation</span>
+                <ol>
+                    <li>Validation done on the browser is called client-side validation while validation done in the server is called server-side validation.</li>
+                    <li>We validate data to: <br>
+                        <ul>
+                            <li>Get the right data in the right format</li>
+                            <li>To protect users data such as ensuring a particular password format</li>
+                            <li>To protect ourselves from malicious internet users</li>
+                        </ul>
+                    </li>
+                    <li>
+                        We can validate on the client side using Built-in HTMl form validation(which has better performance than javascript) or using javascript(which is completely customizable).
+                    </li>
+                    <li>
+                        Form data that pass validation can be acces with the <span class="emph_4">:valid</span> CSS pseudo-class.
+                    </li>
+                    <li>
+                        Example: <br>
+                        <form>
+                            <label for="choose">Would you prefer a banana or a cherry?</label>
+                            <input id="choose" name="i-like" required pattern="[Bb]anana|[Cc]herry" />
+                            <span class="error hidden" >I don't like you</span>
+                            <button>Submit</button>
+                          </form>
+                    </li>
+                    <li>
+                        The contraint validation API gives us enormous control over the user interface while validating form data with javascript.
+                    </li>
+                    <li>
+                        We can validate form data without using special APIs by writing our own javascript.
+                    </li>
+                </ol></li>
+                <li>
+                    <span class="emph">Using the Fetch API</span>
+                    <ol>
+                        <li>
+                            'The Fetch API provides a JavaScript interface for accessing and manipulating parts of the protocol, such as requests and responses.'
+                        </li>
+                        <li>
+                            we can use the <span class="emph_4">fetch()</span> API with one argument, the url we are fetching from. or passing in request options as a second argument.
+                        </li>
+                        <li>
+                            the options object has the following fields: method('GET','POST','PUT','DELETE'), mode, cache, credentials, headers, redirect, body(which must match the "Content-Type" header. If Content-Type is set 'application/json', we can pass in a JSON string has the body)
+                        </li>
+                        <li>
+                            We can also upload files with the fetch API using <span class="emph_4">FormData()</span> 
+                        </li>
+                        <li>We can supply our own request object with our own headers to make fetch requests. Header contenents can be queried and retrieved.</li>
+                        <li>
+                            'A good use case for headers is checking whether the content type is correct before you process it further.'
+                        </li>
+                        <li>
+                            The most common response properties used are :
+                            <ul>
+                                <li>
+                                    <span class="emph_4">Response.status</span> which contains the response status code. (usually, 200- 299 is good, 400- is bad)
+                                </li>
+                                <li>
+                                    <span class="emph_4">Response.statusText</span> which corresponds to the HTTP status code message.
+                                </li>
+                                <li>
+                                    <span class="emph_4">
+                                        Response.ok
+                                    </span>returns a boolean for whether a response is okay or not.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Rensponses can also be created via JavaScript, but are only really useful in serviceWorkers(proxy servers between web applications), when providing a custom response using the <span class="emph_4">respondsWith()</span> method.
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="./earthQuake/">EarthQuakes</a>
+                </li>
+            </ul>
+        </main>
+        <footer>
+            © 2022 Ola K. Ajibola
+        </footer>
+        <script src="./script.js"></script>
+    </body>
+</html>
