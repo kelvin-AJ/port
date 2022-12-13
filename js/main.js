@@ -57,8 +57,12 @@ const links = [
         url: "week9/"
     },
     {
-        label: "Something else",
+        label: "Form Validation, Fetch API",
         url: "week10/"
+    },
+    {
+        label: "Envelope: Book Keeping system [Final Project]",
+        url: "envelope/"
     }
 ]
 

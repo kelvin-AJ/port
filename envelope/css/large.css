@@ -1,0 +1,98 @@
+@media only screen and (min-width : 500px) {
+    
+    .header__side-bar {
+        position: fixed;
+        left: 0;
+        height: 100%; 
+        width: 4rem;
+        transform: translateY(0rem);
+        flex-direction: row;
+    }
+
+    .header__side-bar ul{
+        display: grid;
+        grid-template-rows: 5rem 1fr 5rem 5rem;
+        align-items: center;
+        justify-items: center;
+        margin-top: 1rem;
+        margin-left: -5px;
+    }
+
+    li{
+        height: 4rem;
+        padding-bottom: 1rem;
+        display: grid;
+        grid-template-rows: 2rem 1rem;
+        align-items: center;
+        justify-items: center;
+    }
+    li:nth-child(1){
+        margin-top: auto;
+        grid-row: 1/2;
+    }
+    li:nth-child(2){
+        grid-row: 3/4;
+    }
+    li:nth-child(3){
+        grid-row: 4/5;
+    }
+    .header__info-bar {
+        border-top: none;
+        padding-left: 0px;
+        grid-template-columns: 1fr;
+    }
+
+    .header__info-bar, .all-envelopes{
+        margin-left: 8rem;
+    }
+    .info-bar__greeting {
+        grid-column: 1/2;
+        font-size: 2rem;
+    }
+
+    .info-bar__allocated {
+        font-weight: bolder;
+        font-size: 3rem;
+    }
+    .basket-header{
+    }
+
+    .labels {
+        display: block;
+        font-size: 0.7rem;
+        color: white;
+        margin: 0px;
+    }
+    .basket {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(22rem, 23rem) );
+        grid-template-rows: repeat(auto-fit, minmax(12rem, 15rem));
+    }
+    .basket-envelope {
+        width: 20rem;
+        height: 12rem;
+    }
+
+    .info-bar__nav-btn {
+        display: none;
+    }
+
+    form.evelope-creation-form {
+        width: 25rem;
+        height: 100vh;
+        position: absolute;
+        right: 0;
+        display: grid;
+        border-radius: 0px;
+    }    
+    form #form-drag-bar {
+        display: none;
+    }
+
+    @keyframes slide-down{
+        0%{
+            transform: translateX(-10rem);
+            opacity: 0.3;
+        }   
+    }
+}
