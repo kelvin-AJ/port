@@ -266,7 +266,7 @@ export default class Interface{
         this.formIsOpen = true;
         this.formMain.classList.remove("hidden");
         this.formMain.scrollIntoView({behavior:"smooth"});
-        setTimeout(() => this.formIsOpen = false, 350);
+        setTimeout(() => this.formIsOpen = false, 410);
 
         // Fill Form
         if(envelope){

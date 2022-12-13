@@ -293,15 +293,15 @@ class App {
     handleMessage() {
         
         this.currencyStatus.getCurrencyStatus(this.storage.getCurrency()[0]).then(message => {
-            setTimeout(
+            setTimeout(() => {
                 this.interface.renderGreeting(message)
+            }
             ,3000);
 
+            setTimeout(() => {
+                this._renderGreetingAndBalance();
+            }, 15000)
 
-            setTimeout(
-                this._renderGreetingAndBalance()
-            , 30000)
-            
         })
     }
 
