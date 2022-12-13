@@ -56,7 +56,7 @@ class App {
         }
 
         
-        // this.handleMessage();
+        this.handleMessage();
         this.interface.updateCurrency(this.storage.getCurrency()[1]);
     }
 

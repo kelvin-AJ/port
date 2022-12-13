@@ -37,7 +37,7 @@ export default class CurrencyStatus{
         const source = currency=="USD" ? "EUR" : "USD"
 
         const myHeaders = new Headers();
-        myHeaders.append("apikey", "ledDeQFNcir1rtAsJNZQkZOzzkMnDHaG");
+        myHeaders.append("apikey", "gmIOzyqYpylbwQ05aQU01Lf0j58wGhud");
 
         const requestOptions = {
         method: 'GET',
