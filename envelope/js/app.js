@@ -27,6 +27,7 @@ class App {
         if(this.storage.initialized){
             this._renderGreetingAndBalance();
             this._renderMiscelleneous();
+            this.handleMessage();
         }
         this._allowSidebarInteraction()
         this._renderAllEnvelopes();
@@ -52,11 +53,12 @@ class App {
                 this.storage.initialize();
                 this._renderGreetingAndBalance();
                 this._renderMiscelleneous();
+                this.handleMessage();
             }, true)
         }
 
         
-        this.handleMessage();
+        
     }
 
     _allowSidebarInteraction() {
