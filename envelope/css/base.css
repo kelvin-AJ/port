@@ -416,6 +416,10 @@ form #form-drag-bar{
     margin-bottom: 1rem;
     background-color: var(--input-bg);
 }
+form.evelope-creation-form:valid .action-btn{
+    color: #4ed49c;
+}
+
 .action-btn:active{
     background-color: var(--xanadu);
     color: white;

@@ -212,9 +212,9 @@ export default class Interface{
                 this.removeFormError("decrement");
             }
 
-            if(this.incrementEl.value < 1 && (!this.incrementEl.validity.valueMissing)){
-                this.createFormError("increment","Rate can't be less than 1");
-                this.incrementEl.value = 1
+            if(this.incrementEl.value < 0 && (!this.incrementEl.validity.valueMissing)){
+                this.createFormError("increment","Rate can't be less than 0");
+                this.incrementEl.value = 0
             }else{
                 this.removeFormError("increment");
             }

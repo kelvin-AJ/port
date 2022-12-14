@@ -15,7 +15,7 @@ const skills = [
     },
     {
         skillName : "Web Frontend II",
-        progress : 55
+        progress : 100
     }
 ]
 

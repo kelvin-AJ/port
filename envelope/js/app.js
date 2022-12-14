@@ -32,7 +32,7 @@ class App {
         this._renderAllEnvelopes();
         this._allowFormHandling();
         this._handleEnvelopeInteraction();
-
+        this.interface.updateCurrency(this.storage.getCurrency()[1]);
     }
 
     _initialize() {
@@ -41,10 +41,10 @@ class App {
 
             this.interface.handleSetupForm(() => {
                 const formData  = this.interface.getFormData(true);
-                console.log(formData)
 
                 this.storage.setBalance(Number(formData.allocation));
                 this.storage.setCurrency(this.currency[formData.currency]);
+                this.interface.updateCurrency(this.currency[formData.currency][1]);
                 this.storage.setFirstName(formData.firstName);
                 
                 this.interface.hideSetupForm();
@@ -57,7 +57,6 @@ class App {
 
         
         this.handleMessage();
-        this.interface.updateCurrency(this.storage.getCurrency()[1]);
     }
 
     _allowSidebarInteraction() {

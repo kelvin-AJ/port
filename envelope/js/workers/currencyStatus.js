@@ -1,5 +1,5 @@
 export default class CurrencyStatus{
-    currency = {
+    currencies = {
         USD : ["USD", "$"],
         NGN : ["NGN", "₦"],
         EUR : ["EUR", "€"],
@@ -62,13 +62,13 @@ export default class CurrencyStatus{
     generateMessage(currency, percentageChange, from , to, source) {
         let message = currency;
         if(percentageChange == 0) {
-            message += ` has been stable in the past week`;
+            message += ` has been stable in the past week at ${this.currencies[source][1]}1 = ${this.currencies[currency][1]}${to}`;
         }
         else if(percentageChange < 0) {
-            message += ` has dropped by ${Math.abs(percentageChange)}% from ${this.currency[source][1]}1 = ${this.currency[currency][1]}${from} to ${this.currency[source][1]}1 = ${this.currency[currency][1]}${to} in the past week`;
+            message += ` has dropped by ${Math.abs(percentageChange)}% from ${this.currencies[source][1]}1 = ${this.currencies[currency][1]}${from} to ${this.currencies[source][1]}1 = ${this.currencies[currency][1]}${to} in the past week`;
         }
         else if(percentageChange > 0) {
-            message += ` has increased by ${percentageChange}% from ${this.currency[source][1]}1 = ${this.currency[currency][1]}${from} to ${this.currency[source][1]}1 = ${this.currency[currency][1]}${to} in the past week`;
+            message += ` has increased by ${percentageChange}% from ${this.currencies[source][1]}1 = ${this.currencies[currency][1]}${from} to ${this.currencies[source][1]}1 = ${this.currencies[currency][1]}${to} in the past week`;
         }
 
         return message;
